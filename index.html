@@ -3,11 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="rslider.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <style>
+      body {
+        overflow: hidden;
+      }
+      .slider-container {
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+      }
+      .info {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        z-index: 10;
+        background-color: black;
+        color: white;
+        padding: 24px;
+        opacity: 0.7;
+        font-family: monospace;
+        font-size: 48px;
+      }
+    </style>
   </head>
-  <body>
-    <div id="app"></div>
+  <body style="--normalizedSelectedRangeWidth: calc(var(--normalizedSelectedRangeMax) - var(--normalizedSelectedRangeMin))">
+    <div class="slider-container"><input type="text" id="sampleSlider" /></div>
+    <div class="info">yo</div>
+    <script src="rslider.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
+</html>
 </html>
